@@ -17,6 +17,10 @@ nav {
   font-weight: 300;
   text-align: center;
  }
+ 
+ nav strong {
+  font-weight: bold;
+ }
 
  .fa-solid {
   color: red;
