@@ -1,0 +1,25 @@
+textarea {
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 3px solid #545149;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  
+}
+
+button {
+  background-color: #4056A1;
+  color: white;
+  text-align: center;
+  font-family: 'Bungee', sans-serif;
+}
+
+.tweet-form {
+  width: 100%;
+}
+
+.counter {
+  font-family: "Bungee", sans-serif;
+  float: right;
+}
