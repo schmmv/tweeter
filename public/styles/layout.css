@@ -29,9 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: stretch;
   margin: auto;
   background-color: #f4f1ec;
-
 }
 
