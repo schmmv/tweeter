@@ -1,3 +1,5 @@
+/* Posted Tweets Styling */
+
 article {
   display: flex;
   width: 100%;
@@ -7,10 +9,12 @@ article {
   margin-bottom: 1em;
   justify-content: center;
 }
+
 article:hover {
   box-shadow: 7px 7px 1px #b0c0f6;
 }
-/*try to leave height alone! unless you know it's not going to be dynamic. use em's in line heights, margins between divs*/
+
+/* Mini Avatar, name, and handle styling */
 .tweets-header {
   display: flex;
   justify-content: space-between;
@@ -18,20 +22,17 @@ article:hover {
   width: 97%;
   margin: auto;
   margin-bottom: 10px;
-  
 }
+
+.handle {
+  color: #a1b4f3;
+}
+
+/* Mini Avatar and name styling */
 .who-tweeted {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-article p {
-  width: 97%;
-  margin: auto;
-  border-bottom: 3px solid #545149;
-  padding-bottom: 20px;
-  margin-top: 10px;
 }
 
 .who-tweeted h3 {
@@ -44,6 +45,15 @@ article p {
   padding-right: 10px;
 }
 
+article p {
+  width: 97%;
+  margin: auto;
+  border-bottom: 3px solid #545149;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* Days since posted and icons styling */
 footer {
   display: flex;
   flex-direction: row;
@@ -54,7 +64,6 @@ footer {
   padding-top: 0.5em;
   font-size: 14px;
   align-items: center;
-
 }
 
 .article-icons .fa-solid{
@@ -68,8 +77,4 @@ footer {
 .article-icons .fa-solid:hover {
   color: #d4c306;
   cursor: pointer;
-}
-
-.handle {
-  color: #a1b4f3;
 }

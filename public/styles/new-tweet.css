@@ -1,3 +1,5 @@
+/* Tweet Form Styling */
+
 textarea {
   background-color: #f4f1ec;
   border: none;
@@ -7,10 +9,12 @@ textarea {
   font-size: 18px;
   
 }
+
+/* Tweet button and counter styling */
 .post-tweet {
   padding-top: 10px;
-
 }
+
 .post-tweet button {
   background-color: #4056A1;
   color: white;
@@ -18,18 +22,19 @@ textarea {
   font-family: 'Bungee', sans-serif;
 }
 
-.tweet-form {
-  width: 100%;
-  margin-top: 20px; /* use margin!!!! */
-  font-weight: 600;
-}
-
 .counter {
   font-family: "Bungee", sans-serif;
   float: right;
 }
 
+/* Whole Form styling */
+.tweet-form {
+  width: 100%;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* Class to apply when too many characters are entered into textarea */
 .counter-err {
   color: red;
-
 }
