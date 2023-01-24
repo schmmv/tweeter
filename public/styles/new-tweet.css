@@ -7,8 +7,11 @@ textarea {
   font-size: 18px;
   
 }
+.post-tweet {
+  padding-top: 10px;
 
-button {
+}
+.post-tweet button {
   background-color: #4056A1;
   color: white;
   text-align: center;
@@ -17,9 +20,16 @@ button {
 
 .tweet-form {
   width: 100%;
+  padding-top: 20px;
+  font-weight: 600;
 }
 
 .counter {
   font-family: "Bungee", sans-serif;
   float: right;
+}
+
+.counter-err {
+  color: red;
+
 }

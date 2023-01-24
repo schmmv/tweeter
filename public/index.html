@@ -31,44 +31,52 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <h1>tweeter</h1>
       <div class="nav-right">
-        <span><strong>Write</strong> a new tweet</span>
-        <br />
-        <i class="fa-solid fa-angles-down"></i>
+        <div>
+          <span><strong>Write</strong> a new tweet</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-angles-down"></i>
+        </div>
       </div>
     </nav>
-    <header>
-      <div>
-        <img src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div>
-        <h2>Your Name</h2>
-      </div>
+    <header class="main-header">
+      <figure>
+        <img src="/images/profile-hex.png" alt="Avatar of user"/>
+        <figcaption><strong>Your</strong> Name</figcaption>
+      </figure>
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <form method="POST" action="/tweets" class="tweet-form">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
-        <div>
+        <div class="post-tweet">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
       <article class="tweet">
-        <header>
-          <h4><img src="#">First Last</h4>
-          <div class="tag">@tag</div>
+        <header class="tweets-header">
+          <div class="who-tweeted">
+            <img src="#" alt="mini avatar">
+            <h3>First Last</h3>
+          </div>
+          <div class="handle">
+            <span>@handle</span>
+          </div>
         </header>
-        <textarea>This is my tweet</textarea>
+        <p>This is my tweet</p>
         <footer>
-          x days ago
           <div>
-          <a href="#"><i class="fa-solid fa-flag"></i></a>
-          <a href="#"><i class="fa-solid fa-retweet"></i></a>
-          <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <time>x days ago</time>
+          </div>
+        <div class="article-icons">
+          <!---buttons??-->
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
         </div>
         </footer>
       </article>
