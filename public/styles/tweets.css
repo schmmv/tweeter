@@ -17,6 +17,7 @@ article:hover {
   align-items: center;
   width: 97%;
   margin: auto;
+  margin-bottom: 10px;
   
 }
 .who-tweeted {
@@ -30,11 +31,17 @@ article p {
   margin: auto;
   border-bottom: 3px solid #545149;
   padding-bottom: 20px;
+  margin-top: 10px;
 }
 
 .who-tweeted h3 {
   font-weight: 300;
   font-size: 24px;
+}
+
+.who-tweeted img {
+  width: 50px;
+  padding-right: 10px;
 }
 
 footer {
@@ -60,6 +67,7 @@ footer {
 
 .article-icons .fa-solid:hover {
   color: #d4c306;
+  cursor: pointer;
 }
 
 .handle {

@@ -21,6 +21,10 @@ nav {
  nav strong {
   font-weight: bold;
  }
+ 
+ nav h1 {
+  font-size: 36px;
+ }
 
 i.fa-solid.fa-angles-down {
   color: red;
