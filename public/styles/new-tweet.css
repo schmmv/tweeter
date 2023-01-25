@@ -30,7 +30,8 @@ textarea {
 /* Whole Form styling */
 .tweet-form {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   font-weight: 600;
 }
 
