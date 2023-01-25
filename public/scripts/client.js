@@ -50,7 +50,7 @@ $(document).ready(function() {
         <p>${tweet.content.text}</p>
         <footer>
           <div>
-            <time>${tweet.created_at} days ago</time>
+            <time>${timeago.format(tweet.created_at)}</time>
           </div>
         <div class="article-icons">
           <i class="fa-solid fa-flag"></i>
