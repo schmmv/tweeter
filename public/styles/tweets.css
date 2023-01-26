@@ -55,6 +55,7 @@ article p {
   border-bottom: 3px solid #545149;
   padding-bottom: 20px;
   margin-top: 10px;
+  overflow-wrap: break-word;
 }
 
 /* Days since posted and icons styling */
