@@ -3,7 +3,10 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-  
+ 
+const MAX_CHAR_LENGTH = 140;
+const ERROR_MSG1 = "Too long. Plz rspct our arbitrary limit of 140 chars. #kthxbye.";
+const ERROR_MSG2 = "You Exceeded the Maximum Allowable Character Length.";
 
 /**
  * Function to escape text to prevent cross-site scripting
@@ -60,8 +63,8 @@ return $tweet;
 const renderTweets = function(tweets) {
    //reset the form for another tweet
    $('#tweet-text').val('');
-   $('.counter').text('140');
-   
+   $('.counter').text(MAX_CHAR_LENGTH);
+
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('.tweets-display').prepend($tweet); 
@@ -82,17 +85,23 @@ $(document).ready(function() {
   
   //AJAX request to send (POST) tweet text to the server
   $(".tweet-form").submit(function(event) {
+    
     $(".tweet-form-error").hide();
+    
     event.preventDefault();
+    
     const tweetText = $(this).find('#tweet-text').val();
+
     if (tweetText === '') {
-      return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html('<i class="fa-solid fa-triangle-exclamation"></i>Too long. Plz rspct our arbitrary limit of 140 chars. #kthxbye.<i class="fa-solid fa-triangle-exclamation"></i>').slideDown();
+      return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html(`<i class="fa-solid fa-triangle-exclamation"></i>${ERROR_MSG1}<i class="fa-solid fa-triangle-exclamation"></i>`).slideDown();
     }
-    if (tweetText.length > 140) { ///better way than hardcoding this number??
-      return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html('<i class="fa-solid fa-triangle-exclamation"></i>You Exceeded the Maximum Allowable Character Length.<i class="fa-solid fa-triangle-exclamation"></i>').slideDown();
+    
+    if (tweetText.length > MAX_CHAR_LENGTH) { 
+      return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html(`<i class="fa-solid fa-triangle-exclamation"></i>${ERROR_MSG2}<i class="fa-solid fa-triangle-exclamation"></i>`).slideDown();
     }
 
     const formData = $(this).serialize();
+
     $.post('/tweets', formData)
     .then(function(response) {
       return loadTweets();
