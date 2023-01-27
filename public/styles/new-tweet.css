@@ -35,6 +35,27 @@ textarea {
   font-weight: 600;
 }
 
+/* Error message styling */
+.tweet-form-error {
+  display: none;
+  /* justify-content: flex-start;
+  align-items: center; */
+  padding-left: 10px;
+  margin-bottom: 50px;
+
+  color: red;
+  border: red;
+  border-width: 3px;
+  border-style: solid;
+  font-weight: 300;
+  font-size: 20px;
+
+}
+
+i.fa-solid.fa-triangle-exclamation {
+  padding: 10px;
+}
+
 /* Class to apply when too many characters are entered into textarea */
 .counter-err {
   color: red;

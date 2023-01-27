@@ -61,6 +61,7 @@ const renderTweets = function(tweets) {
    //reset the form for another tweet
    $('#tweet-text').val('');
    $('.counter').text('140');
+   
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('.tweets-display').prepend($tweet); 
@@ -78,28 +79,29 @@ const loadTweets = function() {
 
 
 $(document).ready(function() {
+  
+  //AJAX request to send (POST) tweet text to the server
+  $(".tweet-form").submit(function(event) {
+    $(".tweet-form-error").hide();
+    event.preventDefault();
+    const tweetText = $(this).find('#tweet-text').val();
+    if (tweetText === '') {
+      return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html('<i class="fa-solid fa-triangle-exclamation"></i>Too long. Plz rspct our arbitrary limit of 140 chars. #kthxbye.<i class="fa-solid fa-triangle-exclamation"></i>').slideDown();
+    }
+    if (tweetText.length > 140) { ///better way than hardcoding this number??
+      return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html('<i class="fa-solid fa-triangle-exclamation"></i>You Exceeded the Maximum Allowable Character Length.<i class="fa-solid fa-triangle-exclamation"></i>').slideDown();
+    }
 
-//AJAX request to send (POST) tweet text to the server
-$(".tweet-form").submit(function(event) {
-  event.preventDefault();
-  const tweetText = $(this).find('#tweet-text').val();
-  if (tweetText === '') {
-    return alert('you submitted nothing');
-  }
-  if (tweetText.length > 140) { ///better way than hardcoding this number??
-    return alert('You Exceeded the Maximum Allowable Character Length');
-  }
-  const formData = $(this).serialize();
- 
-  $.post('/tweets', formData)
-  .then(function(response) {
-    return loadTweets();
-  })
-  .then(function(response) {
-   
-    renderTweets(response);
+    const formData = $(this).serialize();
+    $.post('/tweets', formData)
+    .then(function(response) {
+      return loadTweets();
     })
-  .catch(err => console.error(err));
-});
+    .then(function(response) {
+    
+      renderTweets(response);
+      })
+    .catch(err => console.error(err));
+  });
 
 });
