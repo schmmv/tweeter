@@ -6,8 +6,8 @@
  
 //Accessible constants for ease of change
 const MAX_CHAR_LENGTH = 140;
-const ERROR_MSG1 = "Too long. Plz rspct our arbitrary limit of 140 chars. #kthxbye.";
-const ERROR_MSG2 = "You Exceeded the Maximum Allowable Character Length.";
+const ERROR_MSG1 = "Empty tweet. There is nothing to post.";
+const ERROR_MSG2 = "Too long. Plz rspct our arbitrary limit of 140 chars. #kthxbye.";
 
 /**
  * Function to escape text to prevent cross-site scripting
