@@ -25,6 +25,7 @@ nav {
   font-weight: 300;
   text-align: center;
  }
+
  .nav-right-btn {
   background: none;
   border: none;
@@ -45,6 +46,7 @@ nav {
    color: red;
   }
 
+  /* Scroll to top bottom styling */
   .scroll-btn {
     display: none;
     position: fixed;
