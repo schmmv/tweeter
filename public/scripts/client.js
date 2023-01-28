@@ -79,12 +79,16 @@ const renderTweets = function(tweets) {
 
 //Function to perform get request and render tweets
 const loadTweets = function() {
-  return $.get('/tweets')
+  $.get('/tweets')
+  .then(function(tweets) {
+    renderTweets(tweets);
+  })
+  .catch((error) => console.error(error));
 };
 
 
 $(document).ready(function() {
-  
+  loadTweets();
   //AJAX request to send (POST) tweet text to the server
   $("#tweet-form").submit(function(event) {
     
@@ -108,10 +112,7 @@ $(document).ready(function() {
 
     $.post('/tweets', formData)
     .then(function() {
-      return loadTweets();
-    })
-    .then(function(res) {
-      renderTweets(res);
+      loadTweets();
     })
     .catch(err => console.error(err));
   });
