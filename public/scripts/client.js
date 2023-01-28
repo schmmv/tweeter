@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
  
+//Accessible constants for ease of change
 const MAX_CHAR_LENGTH = 140;
 const ERROR_MSG1 = "Too long. Plz rspct our arbitrary limit of 140 chars. #kthxbye.";
 const ERROR_MSG2 = "You Exceeded the Maximum Allowable Character Length.";
@@ -24,6 +25,8 @@ const escapeText = function(str) {
  * @returns an <article> element containing the entire HTML structure of the tweet
  */
 const createTweetElement = function(tweet) {
+  
+  //define elements to be used in html
   const avatar = tweet.user.avatars;
   const username = tweet.user.name;
   const handle = tweet.user.handle;
@@ -52,8 +55,10 @@ const createTweetElement = function(tweet) {
         <i class="fa-solid fa-heart"></i>
       </div>
       </footer>
-  </article>`)
+  </article>`);
+
 return $tweet;
+
 };
 
 /**
@@ -61,7 +66,8 @@ return $tweet;
  * @param {Array of tweet Objects} tweets 
  */
 const renderTweets = function(tweets) {
-   //reset the form for another tweet
+   
+  //reset the form for another tweet
    $('#tweet-text').val('');
    $('.counter').text(MAX_CHAR_LENGTH);
 
@@ -74,10 +80,6 @@ const renderTweets = function(tweets) {
 //Function to perform get request and render tweets
 const loadTweets = function() {
   return $.get('/tweets')
-  // .then(function(response) {
-  //   renderTweets(response);
-  // })
-  // .catch(err => console.error(err));
 };
 
 
@@ -88,14 +90,16 @@ $(document).ready(function() {
     
     $(".tweet-form-error").hide();
     
+    //prevent default re-direction
     event.preventDefault();
     
     const tweetText = $(this).find('#tweet-text').val();
 
+    //Display validation error for empty text area upon submit 
     if (tweetText === '') {
       return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html(`<i class="fa-solid fa-triangle-exclamation"></i>${ERROR_MSG1}<i class="fa-solid fa-triangle-exclamation"></i>`).slideDown();
     }
-    
+    //Display validation error for exceeding max allowable characters in text area
     if (tweetText.length > MAX_CHAR_LENGTH) { 
       return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html(`<i class="fa-solid fa-triangle-exclamation"></i>${ERROR_MSG2}<i class="fa-solid fa-triangle-exclamation"></i>`).slideDown();
     }
@@ -103,13 +107,12 @@ $(document).ready(function() {
     const formData = $(this).serialize();
 
     $.post('/tweets', formData)
-    .then(function(response) {
+    .then(function() {
       return loadTweets();
     })
-    .then(function(response) {
-    
-      renderTweets(response);
-      })
+    .then(function(res) {
+      renderTweets(res);
+    })
     .catch(err => console.error(err));
   });
 
