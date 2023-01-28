@@ -6,9 +6,9 @@
 $(document).ready(function() {
 
   $('.nav-right-btn').click(function() {
-    $('.tweet-form').slideToggle(500);
+    $('#tweet-form').slideToggle(500);
     $('html, body').animate({
-    scrollTop: $('.tweet-form').offset().top
+      scrollTop: $('#tweet-form').offset().top
     }, 1000);
   })
 });

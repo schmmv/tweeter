@@ -86,7 +86,7 @@ const loadTweets = function() {
 $(document).ready(function() {
   
   //AJAX request to send (POST) tweet text to the server
-  $(".tweet-form").submit(function(event) {
+  $("#tweet-form").submit(function(event) {
     
     $(".tweet-form-error").hide();
     
