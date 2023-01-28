@@ -25,6 +25,15 @@ nav {
   font-weight: 300;
   text-align: center;
  }
+ .nav-right-btn {
+  background: none;
+  border: none;
+ }
+
+ .nav-right-btn:hover {
+  cursor: pointer;
+  transform: translateY(0.15em);
+ }
  
  /* Override normalize to make 'Write' bold */
  nav strong {
