@@ -1,17 +1,15 @@
 /**
- * Make new tweet form visible upon clicking on Write a new tweet arrow icon
- * Also scroll down to the form
- * Also Enable textarea automatically
+ * Make new tweet form visible upon clicking on Write a new tweet arrow icon,
+ * scroll down to the form, and enable textarea automatically
  */
 
 $(document).ready(function() {
 
   $('.nav-right-btn').click(function() {
+   
     $('#tweet-form').slideToggle(500);
+    $('#tweet-text')[0].scrollIntoView();
     $('#tweet-text').focus();
-
-    $('html, body').animate({
-      scrollTop: $('#tweet-form').offset().top
-    }, 1000);
   })
+
 });
