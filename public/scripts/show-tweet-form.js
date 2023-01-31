@@ -8,7 +8,7 @@ $(document).ready(function() {
   $('.nav-right-btn').click(function() {
    
     $('#tweet-form').slideToggle(500);
-    $('#tweet-text')[0].scrollIntoView();
+    $('.container')[0].scrollIntoView();
     $('#tweet-text').focus();
   })
 

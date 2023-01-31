@@ -1,0 +1,25 @@
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .container {
+    width: 45%;
+    padding-top: 120px;
+    margin: 0;
+  }
+  .main-header {
+    width: 45%;
+   align-items: center;
+   height: 400px;
+   margin-top: 150px;
+  }
+  figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 120px;
+  }
+}

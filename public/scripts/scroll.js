@@ -1,3 +1,6 @@
+/**
+ * Scroll to top button to display when user starts to scroll down
+ */
 $(document).ready(function() {
 
   const btn = $('#scroll-btn');
