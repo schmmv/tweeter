@@ -12,9 +12,16 @@ article {
   margin-bottom: 30px;
   justify-content: center;
 }
-
 article:hover {
   box-shadow: 7px 7px 1px #b0c0f6;
+}
+article p {
+  width: 97%;
+  margin: auto;
+  border-bottom: 3px solid #545149;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  overflow-wrap: break-word;
 }
 
 /* Mini Avatar, name, and handle styling */
@@ -37,24 +44,13 @@ article:hover {
   flex-direction: row;
   align-items: center;
 }
-
 .who-tweeted h3 {
   font-weight: 300;
   font-size: 24px;
 }
-
 .who-tweeted img {
   width: 50px;
   padding-right: 10px;
-}
-
-article p {
-  width: 97%;
-  margin: auto;
-  border-bottom: 3px solid #545149;
-  padding-bottom: 20px;
-  margin-top: 10px;
-  overflow-wrap: break-word;
 }
 
 /* Days since posted and icons styling */
@@ -76,7 +72,6 @@ footer {
   padding-left: 3px;
   padding-right: 3px;
 }
-
 .article-icons .fa-solid:hover {
   color: #d4c306;
   cursor: pointer;

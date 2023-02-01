@@ -12,17 +12,15 @@ textarea {
 .post-tweet {
   padding-top: 10px;
 }
-
+.post-tweet .counter {
+  font-family: "Bungee", sans-serif;
+  float: right;
+}
 .post-tweet button {
   background-color: #4056A1;
   color: #FFFFFF;
   text-align: center;
   font-family: "Bungee", sans-serif;
-}
-
-.counter {
-  font-family: "Bungee", sans-serif;
-  float: right;
 }
 
 /* Whole Form styling */
@@ -46,8 +44,7 @@ textarea {
   font-weight: 300;
   font-size: 20px;
 }
-
-i.fa-solid.fa-triangle-exclamation {
+.tweet-form-error i.fa-solid.fa-triangle-exclamation {
   padding: 10px;
 }
 

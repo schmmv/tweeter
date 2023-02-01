@@ -14,18 +14,18 @@ textarea {
 /* Tweet button and counter styling */
 .post-tweet {
   padding-top: 10px;
-}
 
-.post-tweet button {
-  background-color: $blue;
-  color: $font-color;
-  text-align: center;
-  font-family: $font-Bungee;
-}
+  .counter {
+    font-family: $font-Bungee;
+    float: right;
+  }
 
-.counter {
-  font-family: $font-Bungee;
-  float: right;
+  button {
+    background-color: $blue;
+    color: $font-color;
+    text-align: center;
+    font-family: $font-Bungee;
+  }
 }
 
 /* Whole Form styling */
@@ -50,10 +50,9 @@ textarea {
   font-weight: 300;
   font-size: 20px;
 
-}
-
-i.fa-solid.fa-triangle-exclamation {
-  padding: 10px;
+  i.fa-solid.fa-triangle-exclamation {
+    padding: 10px;
+  }
 }
 
 /* Class to apply when too many characters are entered into textarea */

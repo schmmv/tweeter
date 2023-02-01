@@ -13,11 +13,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
- }
-
- /* Tweeter heading styling */
- nav h1 {
-  font-size: 36px;
+  /* Tweeter heading styling */
+  nav h1 {
+   font-size: 36px;
+  }
+  /* Override normalize to make 'Write' bold */
+  nav strong {
+   font-weight: bold;
+  }
  }
 
  /* The Write New Tweet Section of nav bar styling */
@@ -37,10 +40,6 @@ nav {
   transform: translateY(0.15em);
  }
 
- /* Override normalize to make 'Write' bold */
- nav strong {
-  font-weight: bold;
- }
 
  /* Double down arrow symbol styling */
  i.fa-solid.fa-angles-down {
