@@ -31,5 +31,6 @@ body {
   align-items: center;
   margin: auto;
   background-color: #f4f1ec;
+  scroll-margin-top: 120px;
 }
 
