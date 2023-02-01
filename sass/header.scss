@@ -9,8 +9,10 @@
   width: 100%;
   padding-top: 120px;
   height: 520px;
-  background-color: $header-color;
-  background-image: $background-img;
+  background: {
+    color: $header-color;
+    image: $background-img;
+  }
 }
 
 /* User Name styling */

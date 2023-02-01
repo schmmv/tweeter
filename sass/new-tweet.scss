@@ -32,8 +32,10 @@ textarea {
 #tweet-form {
   display: none;
   width: 100%;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: {
+    top: 40px;
+    bottom: 40px;
+  }
   font-weight: 600;
 }
 
@@ -45,10 +47,14 @@ textarea {
 
   color: $icon-color;
   border: $icon-color;
-  border-width: 3px;
-  border-style: solid;
-  font-weight: 300;
-  font-size: 20px;
+  border: {
+    width: 3px;
+    style: solid;
+  }
+  font: {
+    weight: 300;
+    size: 20px;
+  }
 
   i.fa-solid.fa-triangle-exclamation {
     padding: 10px;

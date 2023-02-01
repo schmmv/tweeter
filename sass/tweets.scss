@@ -10,8 +10,10 @@ article {
   width: 100%;
   flex-direction: column;
   border: $text-border;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: {
+    top: 30px;
+    bottom: 30px;
+  }
   justify-content: center;
 
   &:hover {
@@ -28,7 +30,6 @@ article {
   }
 }
 
-
 /* Mini Avatar, name, and handle styling */
 .tweets-header {
   display: flex;
@@ -43,7 +44,6 @@ article {
   color: #a1b4f3;
 }
 
-
 /* Mini Avatar and name styling */
 .who-tweeted {
   display: flex;
@@ -51,8 +51,10 @@ article {
   align-items: center;
 
   h3 {
-   font-weight: 300;
-   font-size: 24px;
+   font: {
+    weight: 300;
+    size: 24px;
+   }
   }
 
   img {
@@ -70,8 +72,10 @@ footer {
   justify-content: space-between;
   width: 95%;
   margin: auto;
-  padding-bottom: 1.5em;
-  padding-top: 0.5em;
+  padding: {
+    bottom: 1.5em;
+    top: 0.5em;
+  }
   font-size: 14px;
   align-items: center;
 }
@@ -79,8 +83,10 @@ footer {
 .article-icons .fa-solid{
   color: $blue;
   font-size: 16px;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding: {
+    left: 3px;
+    right: 3px;
+  }
 
   &:hover {
     color: #d4c306;

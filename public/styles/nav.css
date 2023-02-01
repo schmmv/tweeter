@@ -11,13 +11,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Tweeter heading styling */
-  /* Override normalize to make 'Write' bold */
 }
-nav nav h1 {
+nav h1 {
   font-size: 36px;
 }
-nav nav strong {
+nav strong {
   font-weight: bold;
 }
 

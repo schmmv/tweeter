@@ -18,8 +18,10 @@ html {
 body {
   color: $text-color;
   background-color: $background-color;
-  font-size: 24px;
-  font-family: $font-Source;
+  font: {
+    size: 24px;
+    family: $font-Source;
+  }
 }
 
 /*
