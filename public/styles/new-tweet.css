@@ -38,7 +38,7 @@ textarea {
   padding-left: 10px;
   margin-bottom: 50px;
   color: red;
-  border: red;
+  border-color: red;
   border-width: 3px;
   border-style: solid;
   font-weight: 300;

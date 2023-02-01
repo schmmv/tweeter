@@ -1,4 +1,4 @@
-@import '_variables.scss';
+@import '_helpers.scss';
 /* Tweet Form Styling */
 
 textarea {
@@ -46,8 +46,9 @@ textarea {
   margin-bottom: 50px;
 
   color: $icon-color;
-  border: $icon-color;
+  
   border: {
+    color: $icon-color;
     width: 3px;
     style: solid;
   }
