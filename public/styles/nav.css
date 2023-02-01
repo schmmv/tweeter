@@ -4,7 +4,7 @@ nav {
   font-family: "Bungee", sans-serif;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #f5a300;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -17,6 +17,9 @@ nav h1 {
 }
 nav strong {
   font-weight: bold;
+}
+nav .fa-solid {
+  color: red;
 }
 
 /* The Write New Tweet Section of nav bar styling */
@@ -34,11 +37,6 @@ nav strong {
 .nav-right-btn:hover {
   cursor: pointer;
   transform: translateY(0.15em);
-}
-
-/* Double down arrow symbol styling */
-i.fa-solid.fa-angles-down {
-  color: red;
 }
 
 /* Scroll to top bottom styling */

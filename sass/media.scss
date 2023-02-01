@@ -1,9 +1,14 @@
+@import '_helpers.scss';
 
+/* Responsive design for desktop screen */
 
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
     justify-content: space-evenly;
+  }
+  nav {
+    background-color: $blue;
   }
   .container {
     width: 45%;

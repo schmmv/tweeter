@@ -2,10 +2,7 @@
 /* Header With Background And Avatar Styling */
 
 .main-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center-align(column);
   width: 100%;
   padding-top: 120px;
   height: 520px;
