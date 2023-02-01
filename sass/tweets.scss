@@ -1,4 +1,6 @@
+@import '_variables.scss';
 /* Posted Tweets Styling */
+
 .tweets-display {
   width: 100%;
 }
@@ -7,7 +9,7 @@ article {
   display: flex;
   width: 100%;
   flex-direction: column;
-  border: 3px solid #545149;
+  border: $text-border;
   margin-top: 30px;
   margin-bottom: 30px;
   justify-content: center;
@@ -51,7 +53,7 @@ article:hover {
 article p {
   width: 97%;
   margin: auto;
-  border-bottom: 3px solid #545149;
+  border-bottom: $text-border;
   padding-bottom: 20px;
   margin-top: 10px;
   overflow-wrap: break-word;
@@ -70,11 +72,12 @@ footer {
   align-items: center;
 }
 
-.article-icons .fa-solid {
-  color: #4056A1;
+.article-icons .fa-solid{
+  color: $blue;
   font-size: 16px;
   padding-left: 3px;
   padding-right: 3px;
+
 }
 
 .article-icons .fa-solid:hover {

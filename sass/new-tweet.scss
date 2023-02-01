@@ -1,11 +1,14 @@
+@import '_variables.scss';
 /* Tweet Form Styling */
+
 textarea {
-  background-color: #f4f1ec;
+  background-color: $background-color;
   border: none;
-  border-bottom: 3px solid #545149;
+  border-bottom: $text-border;
   outline: none;
   width: 100%;
   font-size: 18px;
+  
 }
 
 /* Tweet button and counter styling */
@@ -14,14 +17,14 @@ textarea {
 }
 
 .post-tweet button {
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: $blue;
+  color: $font-color;
   text-align: center;
-  font-family: "Bungee", sans-serif;
+  font-family: $font-Bungee;
 }
 
 .counter {
-  font-family: "Bungee", sans-serif;
+  font-family: $font-Bungee;
   float: right;
 }
 
@@ -39,12 +42,14 @@ textarea {
   display: none;
   padding-left: 10px;
   margin-bottom: 50px;
-  color: red;
-  border: red;
+
+  color: $icon-color;
+  border: $icon-color;
   border-width: 3px;
   border-style: solid;
   font-weight: 300;
   font-size: 20px;
+
 }
 
 i.fa-solid.fa-triangle-exclamation {
@@ -53,5 +58,5 @@ i.fa-solid.fa-triangle-exclamation {
 
 /* Class to apply when too many characters are entered into textarea */
 .counter-err {
-  color: red;
+  color: $icon-color;
 }

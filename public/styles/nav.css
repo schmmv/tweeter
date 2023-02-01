@@ -1,5 +1,4 @@
 /* Blue Nav Bar Styling */
-
 nav {
   position: fixed;
   font-family: "Bungee", sans-serif;
@@ -12,54 +11,53 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
- }
+}
 
- /* Tweeter heading styling */
- nav h1 {
+/* Tweeter heading styling */
+nav h1 {
   font-size: 36px;
- }
+}
 
- /* The Write New Tweet Section of nav bar styling */
- .nav-right {
+/* The Write New Tweet Section of nav bar styling */
+.nav-right {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   text-align: center;
- }
+}
 
- .nav-right-btn {
+.nav-right-btn {
   background: none;
   border: none;
- }
+}
 
- .nav-right-btn:hover {
+.nav-right-btn:hover {
   cursor: pointer;
   transform: translateY(0.15em);
- }
+}
 
- /* Override normalize to make 'Write' bold */
- nav strong {
+/* Override normalize to make 'Write' bold */
+nav strong {
   font-weight: bold;
- }
+}
 
- /* Double down arrow symbol styling */
- i.fa-solid.fa-angles-down {
-   color: red;
-  }
+/* Double down arrow symbol styling */
+i.fa-solid.fa-angles-down {
+  color: red;
+}
 
-  /* Scroll to top bottom styling */
-  .scroll-btn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-  }
-
+/* Scroll to top bottom styling */
+.scroll-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
