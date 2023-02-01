@@ -10,6 +10,7 @@ $(document).ready(function() {
     $('#tweet-form').slideToggle(500);
     $('.container')[0].scrollIntoView();
     $('#tweet-text').focus();
-  })
+    $('i', this).toggleClass("fa-solid fa-angles-up fa-solid fa-angles-down");
+  });
 
 });
