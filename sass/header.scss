@@ -4,8 +4,8 @@
 .main-header {
   @include center-align(column);
   width: 100%;
-  padding-top: 120px;
-  height: 520px;
+  padding-top: 60px;
+  height: 460px;
   background: {
     color: $header-color;
     image: $background-img;
