@@ -1,6 +1,8 @@
 @import '_helpers.scss';
-/* Posted Tweets Styling */
 
+/*
+ * Posted Tweets Styling
+ */
 .container {
   width: 90%;
   display: flex;
@@ -40,7 +42,9 @@ article {
   }
 }
 
-/* Mini Avatar, name, and handle styling */
+/*
+ * Mini Avatar, name, and handle styling
+ */
 .tweets-header {
   display: flex;
   justify-content: space-between;
@@ -54,7 +58,9 @@ article {
   color: #a1b4f3;
 }
 
-/* Mini Avatar and name styling */
+/*
+ * Mini Avatar and name styling
+ */
 .who-tweeted {
   display: flex;
   flex-direction: row;
@@ -73,13 +79,14 @@ article {
   }
 }
 
-
-
-/* Days since posted and icons styling */
+/*
+ * Days since posted and icons styling
+ */
 footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 95%;
   margin: auto;
   padding: {
@@ -87,7 +94,6 @@ footer {
     top: 0.5em;
   }
   font-size: 14px;
-  align-items: center;
 }
 
 .article-icons .fa-solid{

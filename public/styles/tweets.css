@@ -1,4 +1,12 @@
-/* Posted Tweets Styling */
+/* 
+ * Variables
+ */
+/*
+ * Mixin to center-align element display it by {$direction: row or column}
+ */
+/*
+ * Posted Tweets Styling
+ */
 .container {
   width: 90%;
   display: flex;
@@ -34,7 +42,9 @@ article p {
   overflow-wrap: break-word;
 }
 
-/* Mini Avatar, name, and handle styling */
+/*
+ * Mini Avatar, name, and handle styling
+ */
 .tweets-header {
   display: flex;
   justify-content: space-between;
@@ -48,7 +58,9 @@ article p {
   color: #a1b4f3;
 }
 
-/* Mini Avatar and name styling */
+/*
+ * Mini Avatar and name styling
+ */
 .who-tweeted {
   display: flex;
   flex-direction: row;
@@ -63,17 +75,19 @@ article p {
   padding-right: 10px;
 }
 
-/* Days since posted and icons styling */
+/*
+ * Days since posted and icons styling
+ */
 footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 95%;
   margin: auto;
   padding-bottom: 1.5em;
   padding-top: 0.5em;
   font-size: 14px;
-  align-items: center;
 }
 
 .article-icons .fa-solid {

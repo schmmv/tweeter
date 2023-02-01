@@ -1,4 +1,6 @@
-
+/* 
+ * Variables
+ */
 $font-Bungee: "Bungee", sans-serif;
 $font-Source: "Source Sans Pro", sans-serif;
 $blue: #4056A1;
@@ -10,6 +12,9 @@ $header-color: #f5a300;
 $text-border: 3px solid #545149;
 $background-img: url("https://www.transparenttextures.com/patterns/gplay.png");
 
+/*
+ * Mixin to center-align element display it by {$direction: row or column}
+ */
 @mixin center-align($direction) {
   display: flex;
   flex-direction: $direction;

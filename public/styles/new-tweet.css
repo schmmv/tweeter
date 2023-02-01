@@ -1,4 +1,12 @@
-/* Tweet Form Styling */
+/* 
+ * Variables
+ */
+/*
+ * Mixin to center-align element display it by {$direction: row or column}
+ */
+/*
+ * Tweet Form Styling
+ */
 textarea {
   background-color: #f4f1ec;
   border: none;
@@ -8,7 +16,9 @@ textarea {
   font-size: 18px;
 }
 
-/* Tweet button and counter styling */
+/*
+ * Tweet button and counter styling
+ */
 .post-tweet {
   padding-top: 10px;
 }
@@ -23,7 +33,9 @@ textarea {
   font-family: "Bungee", sans-serif;
 }
 
-/* Whole Form styling */
+/*
+ * Tweet Form styling
+ */
 #tweet-form {
   display: none;
   width: 100%;
@@ -32,7 +44,9 @@ textarea {
   font-weight: 600;
 }
 
-/* Error message styling */
+/*
+ * Error message styling
+ */
 .tweet-form-error {
   display: none;
   padding-left: 10px;
@@ -48,7 +62,9 @@ textarea {
   padding: 10px;
 }
 
-/* Class to apply when too many characters are entered into textarea */
+/*
+ *Class to apply when too many characters are entered into textarea
+ */
 .counter-err {
   color: red;
 }

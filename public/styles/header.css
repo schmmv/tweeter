@@ -1,4 +1,12 @@
-/* Header With Background And Avatar Styling */
+/* 
+ * Variables
+ */
+/*
+ * Mixin to center-align element display it by {$direction: row or column}
+ */
+/* 
+* Header (with background and avatar) styling
+*/
 .main-header {
   display: flex;
   flex-direction: column;
@@ -11,7 +19,9 @@
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
 }
 
-/* User Name styling */
+/* 
+ * User Name styling
+ */
 figcaption {
   text-align: center;
   color: #FFFFFF;

@@ -1,4 +1,12 @@
-/* Blue Nav Bar Styling */
+/* 
+ * Variables
+ */
+/*
+ * Mixin to center-align element display it by {$direction: row or column}
+ */
+/*
+ * Nav Bar Styling
+ */
 nav {
   position: fixed;
   font-family: "Bungee", sans-serif;
@@ -22,7 +30,9 @@ nav .fa-solid {
   color: red;
 }
 
-/* The Write New Tweet Section of nav bar styling */
+/*
+ * The Write New Tweet Section of nav bar styling
+ */
 .nav-right {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
@@ -39,7 +49,9 @@ nav .fa-solid {
   transform: translateY(0.15em);
 }
 
-/* Scroll to top bottom styling */
+/*
+ * Scroll to top bottom styling
+ */
 .scroll-btn {
   display: none;
   position: fixed;

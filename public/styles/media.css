@@ -1,4 +1,12 @@
-/* Responsive design for Tablet */
+/* 
+ * Variables
+ */
+/*
+ * Mixin to center-align element display it by {$direction: row or column}
+ */
+/*
+ * Responsive design for Tablet
+ */
 @media only screen and (min-width: 768px) {
   nav {
     height: 120px;
@@ -19,7 +27,9 @@
     height: 520px;
   }
 }
-/* Responsive design for desktop screen */
+/*
+ * Responsive design for desktop screen
+ */
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;

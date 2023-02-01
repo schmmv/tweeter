@@ -1,6 +1,8 @@
 @import '_helpers.scss';
 
-/* Responsive design for Tablet */
+/*
+ * Responsive design for Tablet
+ */
 @media only screen and (min-width: 768px) {
   nav {
     height: 120px;
@@ -15,37 +17,44 @@
      font-size: 36px;
     }
   }
+
   .nav-right {
     display: block;
     text-align: center;
-
   }
+
   .main-header {
     padding-top: 120px;
     height: 520px;
   }
 }
 
-/* Responsive design for desktop screen */
+/*
+ * Responsive design for desktop screen
+ */
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
     justify-content: space-evenly;
   }
+
   nav {
     background-color: $blue;
   }
+
   .container {
     width: 45%;
     padding-top: 120px;
     margin: 0;
   }
+
   .main-header {
     width: 45%;
     align-items: center;
     height: 400px;
     margin-top: 150px;
   }
+
   figure {
     display: flex;
     flex-direction: column;

@@ -1,7 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+/**
+ * Client-side JS logic
  */
  
 //Accessible constants for ease of change
@@ -17,11 +15,11 @@ const escapeText = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 /**
  * Function to generate the DOM structure for a tweet
- * @param {Object} tweet 
+ * @param {Object} tweet
  * @returns an <article> element containing the entire HTML structure of the tweet
  */
 const createTweetElement = function(tweet) {
@@ -30,7 +28,7 @@ const createTweetElement = function(tweet) {
   const avatar = tweet.user.avatars;
   const username = tweet.user.name;
   const handle = tweet.user.handle;
-  const text = escapeText(tweet.content.text); //to protect against any malicious script input
+  const text = escapeText(tweet.content.text);
   const time = timeago.format(tweet.created_at);
 
   const $tweet = $(`
@@ -57,39 +55,44 @@ const createTweetElement = function(tweet) {
       </footer>
   </article>`);
 
-return $tweet;
-
+  return $tweet;
 };
 
 /**
- * Function that appends each <article> tweet element to the end of (but within) the <main class="container">
- * @param {Array of tweet Objects} tweets 
+ * Function that prepends each <article> tweet element before the <div class="tweets-display"> placeholder
+ * @param {Array of tweet Objects} tweets
  */
 const renderTweets = function(tweets) {
    
   //reset the form for another tweet
-   $('#tweet-text').val('');
-   $('.counter').text(MAX_CHAR_LENGTH);
+  $('#tweet-text').val('');
+  $('.counter').text(MAX_CHAR_LENGTH);
 
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('.tweets-display').prepend($tweet); 
+    $('.tweets-display').prepend($tweet);
   }
 };
 
-//Function to perform get request and render tweets
+/**
+ * Function to perform get request and render tweets
+ */
 const loadTweets = function() {
   $.get('/tweets')
-  .then(function(tweets) {
-    renderTweets(tweets);
-  })
-  .catch((error) => console.error(error));
+    .then(function(tweets) {
+      renderTweets(tweets);
+    })
+    .catch((error) => console.error(error));
 };
 
-
+/**
+ * Main function calls, which occur only once the page DOM is ready
+ */
 $(document).ready(function() {
+  //load tweets on page access
   loadTweets();
-  //AJAX request to send (POST) tweet text to the server
+
+  //AJAX request to send tweet text to the server
   $("#tweet-form").submit(function(event) {
     
     $(".tweet-form-error").hide();
@@ -99,22 +102,22 @@ $(document).ready(function() {
     
     const tweetText = $(this).find('#tweet-text').val();
 
-    //Display validation error for empty text area upon submit 
+    //Display validation error for empty text area upon submit
     if (tweetText === '') {
       return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html(`<i class="fa-solid fa-triangle-exclamation"></i>${ERROR_MSG1}<i class="fa-solid fa-triangle-exclamation"></i>`).slideDown();
     }
     //Display validation error for exceeding max allowable characters in text area
-    if (tweetText.length > MAX_CHAR_LENGTH) { 
+    if (tweetText.length > MAX_CHAR_LENGTH) {
       return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html(`<i class="fa-solid fa-triangle-exclamation"></i>${ERROR_MSG2}<i class="fa-solid fa-triangle-exclamation"></i>`).slideDown();
     }
 
     const formData = $(this).serialize();
 
+    //AJAX post to /tweets then load new tweets
     $.post('/tweets', formData)
-    .then(function() {
-      loadTweets();
-    })
-    .catch(err => console.error(err));
+      .then(function() {
+        loadTweets();
+      })
+      .catch(err => console.error(err));
   });
-
 });
