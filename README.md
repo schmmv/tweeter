@@ -11,7 +11,8 @@ Tweeter is a simple, single-page AJAX-based Twitter clone that uses jQuery, HTML
 
 ## Screenshots
 Composing a tweet
-!['Composing a tweet'](https://github.com/schmmv/tweeter/blob/master/docs/new-tweet.gif?raw=true){:width="50%"}
+!['Composing a tweet'](https://github.com/schmmv/tweeter/blob/master/docs/new-tweet.gif?raw=true)
+
 
 Scroll to the top feature
 !['Scroll to top feature'](https://github.com/schmmv/tweeter/blob/master/docs/scroll-up.gif?raw=true)
