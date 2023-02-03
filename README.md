@@ -15,9 +15,15 @@ Two initial tweets are included for development purposes.
 5. Start Tweeting! 
 
 ## Screenshots
+Composing a tweet
 !['Composing a tweet'](https://github.com/schmmv/tweeter/blob/master/docs/new-tweet.gif?raw=true)
+
+Scroll to the top feature
 !['Scroll to top feature'](https://github.com/schmmv/tweeter/blob/master/docs/scroll-up.gif?raw=true)
+
+Responsive design: desktop -> tablet -> phone
 !['Responsive design'](https://github.com/schmmv/tweeter/blob/master/docs/responsive.gif?raw=true)
+
 
 ## Dependencies
 
