@@ -14,6 +14,11 @@ Two initial tweets are included for development purposes.
 4. Go to <http://localhost:8080/> in your browser.
 5. Start Tweeting! 
 
+## Screenshots
+!['Composing a tweet'](https://github.com/schmmv/tweeter/blob/master/docs/new-tweet.gif?raw=true)
+!['Scroll to top feature'](https://github.com/schmmv/tweeter/blob/master/docs/scroll-up.gif?raw=true)
+!['Responsive design'](https://github.com/schmmv/tweeter/blob/master/docs/responsive.gif?raw=true)
+
 ## Dependencies
 
 - Express
