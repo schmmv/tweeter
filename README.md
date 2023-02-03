@@ -2,11 +2,6 @@
 
 Tweeter is a simple, single-page AJAX-based Twitter clone that uses jQuery, HTML5, CSS3, and JS. This project was for practicing front-end skills using these technologies as part of the Lighthouse Labs (LHL) Web Development bootcamp. 
 
-## Disclaimer
-
-The project used starter code already developed by @kvirani of LHL.  Find it [here](https://github.com/lighthouse-labs/tweeter). 
-Two initial tweets are included for development purposes.
-
 ## Getting Started
 
 1. Install dependencies using the `npm install` command.
@@ -16,7 +11,7 @@ Two initial tweets are included for development purposes.
 
 ## Screenshots
 Composing a tweet
-!['Composing a tweet'](https://github.com/schmmv/tweeter/blob/master/docs/new-tweet.gif?raw=true)
+!['Composing a tweet'](https://github.com/schmmv/tweeter/blob/master/docs/new-tweet.gif?raw=true){:width="50%"}
 
 Scroll to the top feature
 !['Scroll to top feature'](https://github.com/schmmv/tweeter/blob/master/docs/scroll-up.gif?raw=true)
@@ -33,4 +28,9 @@ Responsive design: desktop -> tablet -> phone
 - chance
 - express
 - sass (`npm install -g sass`)
+
+## Disclaimer
+
+The project used starter code already developed by @kvirani of LHL.  Find it [here](https://github.com/lighthouse-labs/tweeter). User names and avatars are randomly generated for each posted tweet.
+Two initial tweets are included for development purposes. 
 
