@@ -67,6 +67,9 @@ const renderTweets = function(tweets) {
   //reset the form for another tweet
   $('#tweet-text').val('');
   $('.counter').text(MAX_CHAR_LENGTH);
+  
+  //empty tweets-display so stored tweets are reloaded
+  $('.tweets-display').empty();
 
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
