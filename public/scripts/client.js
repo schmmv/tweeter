@@ -1,11 +1,6 @@
 /**
  * Client-side JS logic
  */
- 
-//Accessible constants for ease of change
-const MAX_CHAR_LENGTH = 140;
-const ERROR_MSG1 = "Empty tweet. There is nothing to post.";
-const ERROR_MSG2 = "Too long. Plz rspct our arbitrary limit of 140 chars. #kthxbye.";
 
 /**
  * Function to escape text to prevent cross-site scripting
@@ -66,8 +61,8 @@ const renderTweets = function(tweets) {
    
   //reset the form for another tweet
   $('#tweet-text').val('');
-  $('.counter').text(MAX_CHAR_LENGTH);
-  
+  $('.counter').text(140);
+
   //empty tweets-display so stored tweets are reloaded
   $('.tweets-display').empty();
 
@@ -107,11 +102,11 @@ $(document).ready(function() {
 
     //Display validation error for empty text area upon submit
     if (tweetText === '') {
-      return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html(`<i class="fa-solid fa-triangle-exclamation"></i>${ERROR_MSG1}<i class="fa-solid fa-triangle-exclamation"></i>`).slideDown();
+      return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html(`<i class="fa-solid fa-triangle-exclamation"></i>Empty tweet. There is nothing to post.<i class="fa-solid fa-triangle-exclamation"></i>`).slideDown();
     }
     //Display validation error for exceeding max allowable characters in text area
-    if (tweetText.length > MAX_CHAR_LENGTH) {
-      return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html(`<i class="fa-solid fa-triangle-exclamation"></i>${ERROR_MSG2}<i class="fa-solid fa-triangle-exclamation"></i>`).slideDown();
+    if (tweetText.length > 140) {
+      return $(".tweet-form-error").css({display: 'flex', 'align-items': 'center'}).html(`<i class="fa-solid fa-triangle-exclamation"></i>Too long. Tweet is limited to 140 chars.<i class="fa-solid fa-triangle-exclamation"></i>`).slideDown();
     }
 
     const formData = $(this).serialize();
