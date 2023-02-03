@@ -1,8 +1,6 @@
 @import '_helpers.scss';
 
-/*
- * Tweet Form Styling
- */
+//Tweet Form Styling
 textarea {
   background-color: $background-color;
   border: none;
@@ -12,9 +10,7 @@ textarea {
   font-size: 18px;
 }
 
-/*
- * Tweet button and counter styling
- */
+//Tweet button and counter styling
 .post-tweet {
   padding-top: 10px;
 
@@ -31,9 +27,7 @@ textarea {
   }
 }
 
-/*
- * Tweet Form styling
- */
+//Tweet Form styling
 #tweet-form {
   display: none;
   width: 100%;
@@ -44,9 +38,7 @@ textarea {
   font-weight: 600;
 }
 
-/*
- * Error message styling
- */
+//Error message styling
 .tweet-form-error {
   display: none;
   padding-left: 10px;
@@ -67,9 +59,7 @@ textarea {
   }
 }
 
-/*
- *Class to apply when too many characters are entered into textarea
- */
+//Class to apply when too many characters are entered into textarea
 .counter-err {
   color: $icon-color;
 }

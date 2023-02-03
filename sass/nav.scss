@@ -1,8 +1,6 @@
 @import '_helpers.scss';
 
-/*
- * Nav Bar Styling
- */
+//Nav Bar Styling
 nav {
   position: fixed;
   font-family: $font-Bungee;
@@ -32,9 +30,7 @@ nav {
   }
  }
 
- /*
-  * The Write New Tweet Section of nav bar styling
-  */
+//The Write New Tweet Section of nav bar styling
  .nav-right {
   font: {
     family: $font-Source;
@@ -53,9 +49,7 @@ nav {
   transform: translateY(0.15em);
  }
 
-/*
- * Scroll to top bottom styling
- */
+//Scroll to top bottom styling
 .scroll-btn {
   display: none;
   position: fixed;

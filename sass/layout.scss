@@ -1,8 +1,8 @@
-/*
-* http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-* https://css-tricks.com/international-box-sizing-awareness-day/
-* Do not modify these two selectors, please
-*/
+
+//http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+//https://css-tricks.com/international-box-sizing-awareness-day/
+//Do not modify these two selectors, please. @kvirani
+
 @import '_helpers.scss';
 
 html {
@@ -12,9 +12,7 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+//Global layout
 body {
   color: $text-color;
   background-color: $background-color;

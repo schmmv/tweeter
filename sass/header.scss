@@ -1,8 +1,6 @@
 @import '_helpers.scss';
 
-/* 
-* Header (with background and avatar) styling
-*/
+//Header (with background and avatar) styling
 .main-header {
   @include center-align(column);
   width: 100%;
@@ -14,9 +12,7 @@
   }
 }
 
-/* 
- * User Name styling
- */
+//User Name styling
 figcaption {
   text-align: center;
   color: $font-color;
